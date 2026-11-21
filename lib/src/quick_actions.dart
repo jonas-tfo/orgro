@@ -6,11 +6,12 @@ import 'package:orgro/src/debug.dart';
 import 'package:orgro/src/file_picker.dart';
 import 'package:orgro/src/pages/pages.dart';
 import 'package:orgro/src/pages/start/util.dart';
+import 'package:orgro/src/pages/voice_capture.dart';
 import 'package:orgro/src/preferences.dart';
 import 'package:orgro/src/util.dart';
 import 'package:quick_actions/quick_actions.dart' as qa;
 
-enum QuickAction { newDocument, topPin }
+enum QuickAction { newDocument, topPin, voiceNote, findNode }
 
 class QuickActions extends StatefulWidget {
   const QuickActions({required this.child, super.key});
@@ -60,6 +61,12 @@ class _QuickActionsState extends State<QuickActions> {
           mode: InitialMode.edit,
         );
         break;
+      case QuickAction.voiceNote:
+        await showVoiceCapture(context, autoStart: true);
+        break;
+      case QuickAction.findNode:
+        await showNodeFinder(context);
+        break;
       case QuickAction.topPin:
         final pin = RememberedFiles.of(context).pinned.firstOrNull;
         if (pin != null) {
@@ -98,6 +105,14 @@ class _QuickActionsState extends State<QuickActions> {
     super.didChangeDependencies();
     final pin = RememberedFiles.of(context).pinned.firstOrNull;
     _quickActions.setShortcutItems(<qa.ShortcutItem>[
+      qa.ShortcutItem(
+        type: QuickAction.voiceNote.name,
+        localizedTitle: AppLocalizations.of(context)!.voiceTitle,
+      ),
+      qa.ShortcutItem(
+        type: QuickAction.findNode.name,
+        localizedTitle: AppLocalizations.of(context)!.tooltipFindNode,
+      ),
       qa.ShortcutItem(
         type: QuickAction.newDocument.name,
         localizedTitle: AppLocalizations.of(context)!.quickActionNewDocument,

@@ -1672,6 +1672,210 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Learn more'**
   String get entitlementsLockedDialogActionMoreInfo;
+
+  /// No description provided for @tooltipFindNode.
+  ///
+  /// In en, this message translates to:
+  /// **'Find node'**
+  String get tooltipFindNode;
+
+  /// No description provided for @menuItemFindNode.
+  ///
+  /// In en, this message translates to:
+  /// **'Find node'**
+  String get menuItemFindNode;
+
+  /// No description provided for @findNodeHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Find node…'**
+  String get findNodeHint;
+
+  /// No description provided for @findNodeNoResults.
+  ///
+  /// In en, this message translates to:
+  /// **'No matching nodes'**
+  String get findNodeNoResults;
+
+  /// No description provided for @findNodeNeedsDirectory.
+  ///
+  /// In en, this message translates to:
+  /// **'To find org-roam nodes, grant Orgro access to your notes folder.'**
+  String get findNodeNeedsDirectory;
+
+  /// No description provided for @findTextHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search all notes…'**
+  String get findTextHint;
+
+  /// No description provided for @finderModeNodes.
+  ///
+  /// In en, this message translates to:
+  /// **'Nodes'**
+  String get finderModeNodes;
+
+  /// No description provided for @finderModeText.
+  ///
+  /// In en, this message translates to:
+  /// **'Text'**
+  String get finderModeText;
+
+  /// No description provided for @tooltipNewTab.
+  ///
+  /// In en, this message translates to:
+  /// **'New tab'**
+  String get tooltipNewTab;
+
+  /// No description provided for @tooltipCloseTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Close tab'**
+  String get tooltipCloseTab;
+
+  /// No description provided for @voiceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Voice note'**
+  String get voiceTitle;
+
+  /// No description provided for @voiceSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get voiceSave;
+
+  /// No description provided for @voiceDiscard.
+  ///
+  /// In en, this message translates to:
+  /// **'Discard'**
+  String get voiceDiscard;
+
+  /// No description provided for @voiceLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get voiceLanguage;
+
+  /// No description provided for @voiceRecord.
+  ///
+  /// In en, this message translates to:
+  /// **'Record'**
+  String get voiceRecord;
+
+  /// No description provided for @voiceStop.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop'**
+  String get voiceStop;
+
+  /// No description provided for @voiceListening.
+  ///
+  /// In en, this message translates to:
+  /// **'Listening…'**
+  String get voiceListening;
+
+  /// No description provided for @voiceHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the microphone and start talking. You can edit the text before saving.'**
+  String get voiceHint;
+
+  /// No description provided for @voicePermissionDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'Orgro needs microphone and speech recognition access. You can allow it in the Settings app.'**
+  String get voicePermissionDenied;
+
+  /// No description provided for @voiceOpenFile.
+  ///
+  /// In en, this message translates to:
+  /// **'Open'**
+  String get voiceOpenFile;
+
+  /// No description provided for @voiceSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved to {file}'**
+  String voiceSaved(String file);
+
+  /// No description provided for @finderModePapers.
+  ///
+  /// In en, this message translates to:
+  /// **'Papers'**
+  String get finderModePapers;
+
+  /// No description provided for @findPaperHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Find paper…'**
+  String get findPaperHint;
+
+  /// No description provided for @findPaperOpenNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Open note'**
+  String get findPaperOpenNote;
+
+  /// No description provided for @settingsSectionNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get settingsSectionNotes;
+
+  /// No description provided for @settingsItemNotesFolder.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes folder'**
+  String get settingsItemNotesFolder;
+
+  /// No description provided for @settingsItemNotesFolderUnset.
+  ///
+  /// In en, this message translates to:
+  /// **'Not set: using the first folder Orgro has access to'**
+  String get settingsItemNotesFolderUnset;
+
+  /// No description provided for @settingsItemNotesFolderClear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get settingsItemNotesFolderClear;
+
+  /// No description provided for @settingsItemBibliography.
+  ///
+  /// In en, this message translates to:
+  /// **'Bibliography file'**
+  String get settingsItemBibliography;
+
+  /// No description provided for @settingsItemBibliographyHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Path of the .bib file inside the notes folder'**
+  String get settingsItemBibliographyHelp;
+
+  /// No description provided for @settingsItemBibliographyReset.
+  ///
+  /// In en, this message translates to:
+  /// **'Default'**
+  String get settingsItemBibliographyReset;
+
+  /// No description provided for @findPaperLoadError.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn’t load the bibliography ({error}). Check the path under Settings → Notes.'**
+  String findPaperLoadError(String error);
+
+  /// No description provided for @finderModeFiles.
+  ///
+  /// In en, this message translates to:
+  /// **'Files'**
+  String get finderModeFiles;
+
+  /// No description provided for @findFileHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Find file…'**
+  String get findFileHint;
 }
 
 class _AppLocalizationsDelegate

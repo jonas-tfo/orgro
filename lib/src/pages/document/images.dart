@@ -24,15 +24,19 @@ extension ImageHandler on DocumentPageState {
     final doc = DocumentProvider.of(context).doc;
     try {
       final fileLink = convertLinkResolvingAttachments(context, doc, link);
-      if (fileLink.isRelative) {
+      // Absolute paths (e.g. written on another machine) are looked up in
+      // the notes folder by the data source
+      if (fileLink.isRelative || _isAbsolutePath(fileLink.body)) {
         return _loadLocalImage(link, fileLink);
       }
     } on Exception {
       // Not a file link
     }
-    // Absolute paths, and...?
     return null;
   }
+
+  bool _isAbsolutePath(String path) =>
+      path.startsWith('/') || path.startsWith('~');
 
   Widget? _loadRemoteImage(OrgLink link) {
     assert(looksLikeUrl(link.location));

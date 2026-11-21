@@ -12,6 +12,7 @@ import 'package:orgro/src/pages/pages.dart';
 import 'package:orgro/src/preferences.dart';
 import 'package:orgro/src/quick_actions.dart';
 import 'package:orgro/src/routes/routes.dart';
+import 'package:orgro/src/voice/voice_actions.dart';
 import 'package:orgro/theme.dart';
 
 final startKey = GlobalKey<StartPageState>();
@@ -21,6 +22,9 @@ void main() async {
     yield LicenseEntryWithLineBreaks([
       'google_fonts',
     ], await rootBundle.loadString('assets/fonts/OFL.txt'));
+    yield LicenseEntryWithLineBreaks([
+      'JetBrains Mono',
+    ], await rootBundle.loadString('assets/fonts/OFL-JetBrainsMono.txt'));
     yield LicenseEntryWithLineBreaks([
       'LineReader',
     ], await rootBundle.loadString('assets/licenses/LICENSE-LineReader.txt'));
@@ -112,7 +116,9 @@ class _MyApp extends StatelessWidget {
         duration: const Duration(milliseconds: 300),
         child: Preferences.of(context, PrefsAspect.init).isInitialized
             ? QuickActions(
-                child: BackgroundTasks(child: StartPage(key: startKey)),
+                child: VoiceActions(
+                  child: BackgroundTasks(child: StartPage(key: startKey)),
+                ),
               )
             : const _Splash(),
         transitionBuilder: (child, animation) =>

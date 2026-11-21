@@ -9,6 +9,7 @@ import 'package:orgro/src/components/layout.dart';
 import 'package:orgro/src/components/list.dart';
 import 'package:orgro/src/components/view_settings.dart';
 import 'package:orgro/src/entitlements.dart';
+import 'package:orgro/src/pages/notes_settings_items.dart';
 import 'package:orgro/src/preferences.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -61,6 +62,14 @@ class SettingsPage extends StatelessWidget {
                     const FontFamilySettingListItem(),
                     const TextScaleSettingListItem(),
                     const _TextPreview(),
+                    const Divider(),
+                    ListHeader(
+                      title: Text(
+                        AppLocalizations.of(context)!.settingsSectionNotes,
+                      ),
+                    ),
+                    const NotesFolderSettingListItem(),
+                    const BibliographySettingListItem(),
                     const Divider(),
                     ListHeader(
                       title: Text(

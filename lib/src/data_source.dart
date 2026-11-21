@@ -10,6 +10,7 @@ import 'package:org_flutter/org_flutter.dart';
 import 'package:orgro/l10n/app_localizations.dart';
 import 'package:orgro/src/debug.dart';
 import 'package:orgro/src/error.dart';
+import 'package:orgro/src/native_search.dart';
 import 'package:orgro/src/util.dart';
 
 abstract class DataSource {
@@ -184,6 +185,25 @@ class NativeDataSource extends DataSource {
         localizedMessage: (context) =>
             AppLocalizations.of(context)!.errorCannotResolveRelativePath,
       );
+    }
+    // Access to the document's folder doesn't cover paths that leave it, nor
+    // absolute paths from another machine: resolve those from the root
+    final root = rootDirIdentifier;
+    if (root != null && pathLeavesFolder(relativePath)) {
+      final inRoot = await resolveInRoot(
+        rootIdentifier: root,
+        fileUri: uri,
+        path: relativePath,
+      );
+      if (inRoot != null) return inRoot;
+      if (relativePath.startsWith('/') || relativePath.startsWith('~')) {
+        throw OrgroError(
+          '$relativePath resolved to a non-file: not found in notes folder',
+          localizedMessage: (context) =>
+              AppLocalizations.of(context)!
+                  .errorPathResolvedToNonFile(relativePath, relativePath),
+        );
+      }
     }
     // TODO(aaron): See if we can resolve to a non-existent file for writing
     final resolved = await FilePickerWritable().resolveRelativePath(

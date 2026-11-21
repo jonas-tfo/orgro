@@ -48,3 +48,5 @@ app.*.map.json
 # Custom
 /tmp
 config.ini
+ios/build/
+android/key.properties

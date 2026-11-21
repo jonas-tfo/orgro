@@ -47,15 +47,15 @@ enum AllDayEventNotificationTime {
   oneWeekBefore,
 }
 
-const kDefaultFontFamily = 'Fira Code';
-const kDefaultTextScale = 1.0;
+const kDefaultFontFamily = 'JetBrains Mono';
+const kDefaultTextScale = 0.8;
 const kDefaultQueryString = '';
 const kDefaultQueryType = QueryType.plain;
 const kDefaultFilterKeywords = <String>[];
 const kDefaultFilterTags = <String>[];
 const kDefaultFilterPriorities = <String>[];
 const kDefaultCustomFilter = '';
-const kDefaultReaderMode = false;
+const kDefaultReaderMode = true;
 const kDefaultRemoteImagesPolicy = RemoteImagesPolicy.ask;
 const kDefaultLocalLinksPolicy = LocalLinksPolicy.ask;
 const kDefaultSaveChangesPolicy = SaveChangesPolicy.ask;
@@ -1030,7 +1030,7 @@ const _kThemeModeSystem = 'theme_mode_system';
 const _kThemeModeLight = 'theme_mode_light';
 const _kThemeModeDark = 'theme_mode_dark';
 
-const _kDefaultThemeMode = ThemeMode.system;
+const _kDefaultThemeMode = ThemeMode.dark;
 
 extension SortOrderPersistence on SortOrder? {
   static SortOrder? fromString(String? key) => switch (key) {

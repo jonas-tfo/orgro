@@ -9,6 +9,8 @@ import workmanager_apple
       _ application: UIApplication,
       didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        // Before any intent runs: the Lock Screen control may have launched us
+        VoiceCapture.shared.installIntentBridge()
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
@@ -23,6 +25,13 @@ import workmanager_apple
 
         let cbChannel = FlutterMethodChannel(name: "com.madlonkay.orgro/clipboard", binaryMessenger: engineBridge.applicationRegistrar.messenger())
         cbChannel.setMethodCallHandler(handleClipboardMethod)
+
+        let messenger = engineBridge.applicationRegistrar.messenger()
+        let vcChannel = FlutterMethodChannel(name: "com.madlonkay.orgro/voice", binaryMessenger: messenger)
+        vcChannel.setMethodCallHandler(VoiceCapture.shared.handle)
+        VoiceCapture.shared.channel = vcChannel
+        FlutterEventChannel(name: "com.madlonkay.orgro/voice_events", binaryMessenger: messenger)
+            .setStreamHandler(VoiceCapture.shared)
 
         UNUserNotificationCenter.current().delegate = self
 

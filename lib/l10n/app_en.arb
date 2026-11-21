@@ -583,5 +583,53 @@
     }
   },
   "entitlementsLockedDialogActionRestore": "Restore",
-  "entitlementsLockedDialogActionMoreInfo": "Learn more"
+  "entitlementsLockedDialogActionMoreInfo": "Learn more",
+  "tooltipFindNode": "Find node",
+  "menuItemFindNode": "Find node",
+  "findNodeHint": "Find node…",
+  "findNodeNoResults": "No matching nodes",
+  "findNodeNeedsDirectory": "To find org-roam nodes, grant Orgro access to your notes folder.",
+  "findTextHint": "Search all notes…",
+  "finderModeNodes": "Nodes",
+  "finderModeText": "Text",
+  "tooltipNewTab": "New tab",
+  "tooltipCloseTab": "Close tab",
+  "voiceTitle": "Voice note",
+  "voiceSave": "Save",
+  "voiceDiscard": "Discard",
+  "voiceLanguage": "Language",
+  "voiceRecord": "Record",
+  "voiceStop": "Stop",
+  "voiceListening": "Listening…",
+  "voiceHint": "Tap the microphone and start talking. You can edit the text before saving.",
+  "voicePermissionDenied": "Orgro needs microphone and speech recognition access. You can allow it in the Settings app.",
+  "voiceOpenFile": "Open",
+  "voiceSaved": "Saved to {file}",
+  "@voiceSaved": {
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "finderModePapers": "Papers",
+  "findPaperHint": "Find paper…",
+  "findPaperOpenNote": "Open note",
+  "settingsSectionNotes": "Notes",
+  "settingsItemNotesFolder": "Notes folder",
+  "settingsItemNotesFolderUnset": "Not set: using the first folder Orgro has access to",
+  "settingsItemNotesFolderClear": "Clear",
+  "settingsItemBibliography": "Bibliography file",
+  "settingsItemBibliographyHelp": "Path of the .bib file inside the notes folder",
+  "settingsItemBibliographyReset": "Default",
+  "findPaperLoadError": "Couldn’t load the bibliography ({error}). Check the path under Settings → Notes.",
+  "@findPaperLoadError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "finderModeFiles": "Files",
+  "findFileHint": "Find file…"
 }

@@ -106,3 +106,43 @@ Future<bool> cancelFindFileWithExactName({required String requestId}) async {
   );
   return result ?? false;
 }
+
+/// Resolve [path] from the document at [fileUri] against the granted root
+/// folder: relative paths that leave the document's folder, and absolute
+/// paths from another machine (mapped by the root folder's name). Returns
+/// null if there's no such file inside the root.
+Future<NativeDataSource?> resolveInRoot({
+  required String rootIdentifier,
+  required String fileUri,
+  required String path,
+}) async {
+  final result = await _channel.invokeMapMethod<String, String>(
+    'resolveInRoot',
+    {'rootIdentifier': rootIdentifier, 'fileUri': fileUri, 'path': path},
+  );
+  if (result == null) return null;
+  final info = FileInfo.fromJson(result);
+  return NativeDataSource(
+    info.fileName ?? path,
+    info.identifier,
+    info.uri,
+    persistable: info.persistable,
+  );
+}
+
+/// Whether [path] is absolute, or relative but climbs above its starting
+/// folder (e.g. "../images/x.png")
+bool pathLeavesFolder(String path) {
+  if (path.startsWith('/') || path.startsWith('~')) return true;
+  var depth = 0;
+  for (final segment in path.split('/')) {
+    if (segment.isEmpty || segment == '.') continue;
+    if (segment == '..') {
+      depth--;
+      if (depth < 0) return true;
+    } else {
+      depth++;
+    }
+  }
+  return false;
+}

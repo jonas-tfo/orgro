@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,10 @@
 		C4AC25232ED5A3C200756304 /* OrgroCapture.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C4AC25192ED5A3C200756304 /* OrgroCapture.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C4AE9CAB2F8E11AB0020157F /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE9CAA2F8E11AB0020157F /* Clipboard.swift */; };
 		C4E0B8912B3C4E850058873A /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E0B8902B3C4E850058873A /* RunnerTests.swift */; };
+		C4F0CE012F90000000A00002 /* VoiceCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F0CE012F90000000A00001 /* VoiceCapture.swift */; };
+		C4F1D7232ED5A3C200756304 /* OrgroWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C4F1D7192ED5A3C200756304 /* OrgroWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C4F1D7A12F90000000A00002 /* VoiceShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1D7A12F90000000A00001 /* VoiceShared.swift */; };
+		C4F1D7A12F90000000A00003 /* VoiceShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1D7A12F90000000A00001 /* VoiceShared.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 97C146ED1CF9000F007C117D;
 			remoteInfo = Runner;
+		};
+		C4F1D7212ED5A3C200756304 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4F1D7182ED5A3C200756304;
+			remoteInfo = OrgroWidgets;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,6 +72,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				C4AC25232ED5A3C200756304 /* OrgroCapture.appex in Embed Foundation Extensions */,
+				C4F1D7232ED5A3C200756304 /* OrgroWidgets.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +116,9 @@
 		C4C13FA92761C74200C59B99 /* Info-Profile.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Profile.plist"; sourceTree = "<group>"; };
 		C4E0B88E2B3C4E840058873A /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0B8902B3C4E850058873A /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
+		C4F0CE012F90000000A00001 /* VoiceCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCapture.swift; sourceTree = "<group>"; };
+		C4F1D7192ED5A3C200756304 /* OrgroWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OrgroWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4F1D7A12F90000000A00001 /* VoiceShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShared.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -116,10 +131,20 @@
 			);
 			target = C4AC25182ED5A3C200756304 /* OrgroCapture */;
 		};
+		C4F1D7282ED5A3C200756304 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Info-Debug.plist",
+				"Info-Profile.plist",
+				"Info-Release.plist",
+			);
+			target = C4F1D7182ED5A3C200756304 /* OrgroWidgets */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C4AC251A2ED5A3C200756304 /* OrgroCapture */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C4AC25282ED5A3C200756304 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = OrgroCapture; sourceTree = "<group>"; };
+		C4F1D71A2ED5A3C200756304 /* OrgroWidgets */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C4F1D7282ED5A3C200756304 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = OrgroWidgets; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5645E442679FA6DB1A59022 /* Pods_RunnerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F1D7162ED5A3C200756304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +225,7 @@
 				97C146F01CF9000F007C117D /* Runner */,
 				C4E0B88F2B3C4E850058873A /* RunnerTests */,
 				C4AC251A2ED5A3C200756304 /* OrgroCapture */,
+				C4F1D71A2ED5A3C200756304 /* OrgroWidgets */,
 				97C146EF1CF9000F007C117D /* Products */,
 				1D51ED2DF072136C4BFC38C2 /* Pods */,
 				8B42D4DD939E39E1794DBF6F /* Frameworks */,
@@ -205,6 +238,7 @@
 				97C146EE1CF9000F007C117D /* Runner.app */,
 				C4E0B88E2B3C4E840058873A /* RunnerTests.xctest */,
 				C4AC25192ED5A3C200756304 /* OrgroCapture.appex */,
+				C4F1D7192ED5A3C200756304 /* OrgroWidgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +264,8 @@
 				C42757312C8490AE00E74B62 /* NativeSearch.swift */,
 				C47F4E1C2EF76CEF00115BD0 /* AppPurchase.swift */,
 				C4AE9CAA2F8E11AB0020157F /* Clipboard.swift */,
+				C4F0CE012F90000000A00001 /* VoiceCapture.swift */,
+				C4F1D7A12F90000000A00001 /* VoiceShared.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
 			);
 			path = Runner;
@@ -271,6 +307,7 @@
 			);
 			dependencies = (
 				C4AC25222ED5A3C200756304 /* PBXTargetDependency */,
+				C4F1D7222ED5A3C200756304 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			packageProductDependencies = (
@@ -319,6 +356,26 @@
 			productReference = C4E0B88E2B3C4E840058873A /* RunnerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C4F1D7182ED5A3C200756304 /* OrgroWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4F1D7292ED5A3C200756304 /* Build configuration list for PBXNativeTarget "OrgroWidgets" */;
+			buildPhases = (
+				C4F1D7152ED5A3C200756304 /* Sources */,
+				C4F1D7162ED5A3C200756304 /* Frameworks */,
+				C4F1D7172ED5A3C200756304 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C4F1D71A2ED5A3C200756304 /* OrgroWidgets */,
+			);
+			name = OrgroWidgets;
+			productName = OrgroWidgets;
+			productReference = C4F1D7192ED5A3C200756304 /* OrgroWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -339,6 +396,9 @@
 					C4E0B88D2B3C4E840058873A = {
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = 97C146ED1CF9000F007C117D;
+					};
+					C4F1D7182ED5A3C200756304 = {
+						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
 			};
@@ -361,6 +421,7 @@
 				97C146ED1CF9000F007C117D /* Runner */,
 				C4E0B88D2B3C4E840058873A /* RunnerTests */,
 				C4AC25182ED5A3C200756304 /* OrgroCapture */,
+				C4F1D7182ED5A3C200756304 /* OrgroWidgets */,
 			);
 		};
 /* End PBXProject section */
@@ -385,6 +446,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C4E0B88C2B3C4E840058873A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F1D7172ED5A3C200756304 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -498,6 +566,8 @@
 				C48838D730425C16008BD433 /* SceneDelegate.swift in Sources */,
 				C42757322C8490AE00E74B62 /* LineReader.swift in Sources */,
 				C4AE9CAB2F8E11AB0020157F /* Clipboard.swift in Sources */,
+				C4F0CE012F90000000A00002 /* VoiceCapture.swift in Sources */,
+				C4F1D7A12F90000000A00002 /* VoiceShared.swift in Sources */,
 				C42757332C8490AE00E74B62 /* NativeSearch.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				C47F4E1D2EF76CEF00115BD0 /* AppPurchase.swift in Sources */,
@@ -519,6 +589,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C4F1D7152ED5A3C200756304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4F1D7A12F90000000A00003 /* VoiceShared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -531,6 +609,11 @@
 			isa = PBXTargetDependency;
 			target = 97C146ED1CF9000F007C117D /* Runner */;
 			targetProxy = C4E0B8922B3C4E850058873A /* PBXContainerItemProxy */;
+		};
+		C4F1D7222ED5A3C200756304 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4F1D7182ED5A3C200756304 /* OrgroWidgets */;
+			targetProxy = C4F1D7212ED5A3C200756304 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -614,7 +697,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Runner/Runner-$(CONFIGURATION).entitlements";
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				DISPLAY_NAME = "Orgro🚀";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -631,7 +714,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.orgro.profile1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro.profile1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -756,7 +839,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Runner/Runner-$(CONFIGURATION).entitlements";
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				DISPLAY_NAME = "Orgro🐞";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -773,7 +856,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.orgro.debug1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro.debug1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -790,7 +873,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Runner/Runner-$(CONFIGURATION).entitlements";
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				DISPLAY_NAME = Orgro;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -807,7 +890,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.orgro;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -826,7 +909,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -843,7 +926,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.orgro.debug1.OrgroCapture;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro.debug1.OrgroCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -868,7 +951,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -884,7 +967,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.orgro.OrgroCapture;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro.OrgroCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -908,7 +991,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -924,7 +1007,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.orgro.profile1.OrgroCapture;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro.profile1.OrgroCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -950,7 +1033,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -959,7 +1042,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.RunnerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -983,7 +1066,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -991,7 +1074,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.RunnerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -1014,7 +1097,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 72MM6F63T6;
+				DEVELOPMENT_TEAM = 8387U7X28C;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1022,13 +1105,135 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.madlonkay.RunnerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
+			};
+			name = Profile;
+		};
+		C4F1D7252ED5A3C200756304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 275;
+				DEVELOPMENT_TEAM = 8387U7X28C;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OrgroWidgets/Info-Debug.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = OrgroWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 2.7.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro.debug1.OrgroWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4F1D7262ED5A3C200756304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 275;
+				DEVELOPMENT_TEAM = 8387U7X28C;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OrgroWidgets/Info-Release.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = OrgroWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 2.7.3;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro.OrgroWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C4F1D7272ED5A3C200756304 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 275;
+				DEVELOPMENT_TEAM = 8387U7X28C;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OrgroWidgets/Info-Profile.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = OrgroWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 2.7.3;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.jonastfo.orgro.profile1.OrgroWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Profile;
 		};
@@ -1071,6 +1276,16 @@
 				C4E0B8952B3C4E860058873A /* Debug */,
 				C4E0B8962B3C4E860058873A /* Release */,
 				C4E0B8972B3C4E860058873A /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4F1D7292ED5A3C200756304 /* Build configuration list for PBXNativeTarget "OrgroWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4F1D7252ED5A3C200756304 /* Debug */,
+				C4F1D7262ED5A3C200756304 /* Release */,
+				C4F1D7272ED5A3C200756304 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

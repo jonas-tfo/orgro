@@ -31,11 +31,13 @@ import 'package:orgro/src/pages/document/narrow.dart';
 import 'package:orgro/src/pages/document/restoration.dart';
 import 'package:orgro/src/pages/document/timestamps.dart';
 import 'package:orgro/src/pages/document/transclusion.dart';
+import 'package:orgro/src/pages/node_finder.dart';
 import 'package:orgro/src/preferences.dart';
 import 'package:orgro/src/routes/document.dart';
 import 'package:orgro/src/serialization.dart';
 import 'package:orgro/src/statistics.dart';
 import 'package:orgro/src/util.dart';
+import 'package:orgro/theme.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
 var _activeDocuments = 0;
@@ -496,6 +498,7 @@ class DocumentPageState extends State<DocumentPage> with RestorationMixin {
             child: SelectionArea(
               child: OrgRootWidget(
                 style: viewSettings.forScope(_dataSource.id).textStyle,
+                darkTheme: orgroHorizonOrgTheme,
                 onLinkTap: openLink,
                 onSectionLongPress: doNarrow,
                 onSectionSlide: _transclusion
@@ -583,6 +586,16 @@ class DocumentPageState extends State<DocumentPage> with RestorationMixin {
             mainAxisAlignment: MainAxisAlignment.end,
             spacing: 16,
             children: [
+              FloatingActionButton(
+                tooltip: AppLocalizations.of(context)!.tooltipFindNode,
+                onPressed: () {
+                  if (scrolling) return;
+                  showNodeFinder(context);
+                },
+                heroTag: '${widget.title}FindNodeFAB',
+                mini: true,
+                child: const Icon(Icons.hub_outlined),
+              ),
               if (!_transclusion)
                 FloatingActionButton(
                   tooltip: AppLocalizations.of(context)!.tooltipEditDocument,

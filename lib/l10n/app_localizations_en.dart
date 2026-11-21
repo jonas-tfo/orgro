@@ -945,6 +945,117 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get entitlementsLockedDialogActionMoreInfo => 'Learn more';
+
+  @override
+  String get tooltipFindNode => 'Find node';
+
+  @override
+  String get menuItemFindNode => 'Find node';
+
+  @override
+  String get findNodeHint => 'Find node…';
+
+  @override
+  String get findNodeNoResults => 'No matching nodes';
+
+  @override
+  String get findNodeNeedsDirectory =>
+      'To find org-roam nodes, grant Orgro access to your notes folder.';
+
+  @override
+  String get findTextHint => 'Search all notes…';
+
+  @override
+  String get finderModeNodes => 'Nodes';
+
+  @override
+  String get finderModeText => 'Text';
+
+  @override
+  String get tooltipNewTab => 'New tab';
+
+  @override
+  String get tooltipCloseTab => 'Close tab';
+
+  @override
+  String get voiceTitle => 'Voice note';
+
+  @override
+  String get voiceSave => 'Save';
+
+  @override
+  String get voiceDiscard => 'Discard';
+
+  @override
+  String get voiceLanguage => 'Language';
+
+  @override
+  String get voiceRecord => 'Record';
+
+  @override
+  String get voiceStop => 'Stop';
+
+  @override
+  String get voiceListening => 'Listening…';
+
+  @override
+  String get voiceHint =>
+      'Tap the microphone and start talking. You can edit the text before saving.';
+
+  @override
+  String get voicePermissionDenied =>
+      'Orgro needs microphone and speech recognition access. You can allow it in the Settings app.';
+
+  @override
+  String get voiceOpenFile => 'Open';
+
+  @override
+  String voiceSaved(String file) {
+    return 'Saved to $file';
+  }
+
+  @override
+  String get finderModePapers => 'Papers';
+
+  @override
+  String get findPaperHint => 'Find paper…';
+
+  @override
+  String get findPaperOpenNote => 'Open note';
+
+  @override
+  String get settingsSectionNotes => 'Notes';
+
+  @override
+  String get settingsItemNotesFolder => 'Notes folder';
+
+  @override
+  String get settingsItemNotesFolderUnset =>
+      'Not set: using the first folder Orgro has access to';
+
+  @override
+  String get settingsItemNotesFolderClear => 'Clear';
+
+  @override
+  String get settingsItemBibliography => 'Bibliography file';
+
+  @override
+  String get settingsItemBibliographyHelp =>
+      'Path of the .bib file inside the notes folder';
+
+  @override
+  String get settingsItemBibliographyReset => 'Default';
+
+  @override
+  String findPaperLoadError(String error) {
+    return 'Couldn’t load the bibliography ($error). Check the path under Settings → Notes.';
+  }
+
+  @override
+  String get finderModeFiles => 'Files';
+
+  @override
+  String get findFileHint => 'Find file…';
 }
 
 /// The translations for English, as used in the United Kingdom (`en_GB`).
@@ -2825,4 +2936,115 @@ class AppLocalizationsEnUs extends AppLocalizationsEn {
 
   @override
   String get entitlementsLockedDialogActionMoreInfo => 'Learn more';
+
+  @override
+  String get tooltipFindNode => 'Find node';
+
+  @override
+  String get menuItemFindNode => 'Find node';
+
+  @override
+  String get findNodeHint => 'Find node…';
+
+  @override
+  String get findNodeNoResults => 'No matching nodes';
+
+  @override
+  String get findNodeNeedsDirectory =>
+      'To find org-roam nodes, grant Orgro access to your notes folder.';
+
+  @override
+  String get findTextHint => 'Search all notes…';
+
+  @override
+  String get finderModeNodes => 'Nodes';
+
+  @override
+  String get finderModeText => 'Text';
+
+  @override
+  String get tooltipNewTab => 'New tab';
+
+  @override
+  String get tooltipCloseTab => 'Close tab';
+
+  @override
+  String get voiceTitle => 'Voice note';
+
+  @override
+  String get voiceSave => 'Save';
+
+  @override
+  String get voiceDiscard => 'Discard';
+
+  @override
+  String get voiceLanguage => 'Language';
+
+  @override
+  String get voiceRecord => 'Record';
+
+  @override
+  String get voiceStop => 'Stop';
+
+  @override
+  String get voiceListening => 'Listening…';
+
+  @override
+  String get voiceHint =>
+      'Tap the microphone and start talking. You can edit the text before saving.';
+
+  @override
+  String get voicePermissionDenied =>
+      'Orgro needs microphone and speech recognition access. You can allow it in the Settings app.';
+
+  @override
+  String get voiceOpenFile => 'Open';
+
+  @override
+  String voiceSaved(String file) {
+    return 'Saved to $file';
+  }
+
+  @override
+  String get finderModePapers => 'Papers';
+
+  @override
+  String get findPaperHint => 'Find paper…';
+
+  @override
+  String get findPaperOpenNote => 'Open note';
+
+  @override
+  String get settingsSectionNotes => 'Notes';
+
+  @override
+  String get settingsItemNotesFolder => 'Notes folder';
+
+  @override
+  String get settingsItemNotesFolderUnset =>
+      'Not set: using the first folder Orgro has access to';
+
+  @override
+  String get settingsItemNotesFolderClear => 'Clear';
+
+  @override
+  String get settingsItemBibliography => 'Bibliography file';
+
+  @override
+  String get settingsItemBibliographyHelp =>
+      'Path of the .bib file inside the notes folder';
+
+  @override
+  String get settingsItemBibliographyReset => 'Default';
+
+  @override
+  String findPaperLoadError(String error) {
+    return 'Couldn’t load the bibliography ($error). Check the path under Settings → Notes.';
+  }
+
+  @override
+  String get finderModeFiles => 'Files';
+
+  @override
+  String get findFileHint => 'Find file…';
 }

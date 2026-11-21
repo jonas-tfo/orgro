@@ -12,16 +12,19 @@ import 'package:orgro/src/routes/document.dart';
 import 'package:orgro/src/routes/narrow.dart';
 import 'package:orgro/src/routes/routes.dart';
 import 'package:orgro/src/serialization.dart';
+import 'package:orgro/src/tabs.dart';
+import 'package:orgro/theme.dart';
 
 Future<void> loadHttpUrl(
   BuildContext context,
   Uri uri, {
   String? target,
   AfterOpenCallback? afterOpen,
-}) => Navigator.pushNamed(
+  bool newTab = false,
+}) => openDocumentRoute(
   context,
-  Routes.document,
-  arguments: DocumentRouteArgs(
+  newTab: newTab,
+  DocumentRouteArgs(
     dataSource: WebDataSource(uri),
     target: target,
     afterOpen: afterOpen,
@@ -33,10 +36,11 @@ Future<void> loadAsset(
   String key, {
   InitialMode? mode,
   AfterOpenCallback? afterOpen,
-}) => Navigator.pushNamed(
+  bool newTab = false,
+}) => openDocumentRoute(
   context,
-  Routes.document,
-  arguments: DocumentRouteArgs(
+  newTab: newTab,
+  DocumentRouteArgs(
     dataSource: AssetDataSource(key),
     mode: mode,
     afterOpen: afterOpen,
@@ -49,10 +53,11 @@ Future<void> loadDocument(
   String? target,
   InitialMode? mode,
   AfterOpenCallback? afterOpen,
-}) => Navigator.pushNamed(
+  bool newTab = false,
+}) => openDocumentRoute(
   context,
-  Routes.document,
-  arguments: DocumentRouteArgs(
+  newTab: newTab,
+  DocumentRouteArgs(
     dataSource: dataSource,
     target: target,
     mode: mode,
@@ -107,6 +112,7 @@ Future<void> showInteractive(
           root: orgController.root,
           child: OrgRootWidget(
             style: viewSettings.data.textStyle,
+            darkTheme: orgroHorizonOrgTheme,
             child: InteractiveViewer(child: Center(child: child)),
           ),
         ),

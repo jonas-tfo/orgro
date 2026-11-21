@@ -18,6 +18,7 @@ import 'package:orgro/src/pages/pages.dart';
 import 'package:orgro/src/pages/start/agenda.dart';
 import 'package:orgro/src/pages/start/remembered_files.dart';
 import 'package:orgro/src/pages/start/util.dart';
+import 'package:orgro/src/pages/voice_capture.dart';
 import 'package:orgro/src/preferences.dart';
 import 'package:orgro/src/routes/routes.dart';
 import 'package:orgro/src/util.dart';
@@ -87,6 +88,16 @@ class StartPageState extends State<StartPage> with PlatformOpenHandler {
   }
 
   Iterable<Widget> _buildActions({required bool hasRememberedFiles}) sync* {
+    yield IconButton(
+      tooltip: AppLocalizations.of(context)!.voiceTitle,
+      icon: const Icon(Icons.mic_none),
+      onPressed: () => showVoiceCapture(context),
+    );
+    yield IconButton(
+      tooltip: AppLocalizations.of(context)!.tooltipFindNode,
+      icon: const Icon(Icons.hub_outlined),
+      onPressed: () => showNodeFinder(context),
+    );
     yield PopupMenuButton<VoidCallback>(
       onSelected: (callback) => callback(),
       itemBuilder: (context) => [

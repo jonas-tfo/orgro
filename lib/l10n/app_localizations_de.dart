@@ -948,4 +948,115 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get entitlementsLockedDialogActionMoreInfo => 'Learn more';
+
+  @override
+  String get tooltipFindNode => 'Knoten finden';
+
+  @override
+  String get menuItemFindNode => 'Knoten finden';
+
+  @override
+  String get findNodeHint => 'Knoten suchen…';
+
+  @override
+  String get findNodeNoResults => 'Keine passenden Knoten';
+
+  @override
+  String get findNodeNeedsDirectory =>
+      'Um org-roam-Knoten zu finden, gib Orgro Zugriff auf deinen Notizordner.';
+
+  @override
+  String get findTextHint => 'Alle Notizen durchsuchen…';
+
+  @override
+  String get finderModeNodes => 'Knoten';
+
+  @override
+  String get finderModeText => 'Text';
+
+  @override
+  String get tooltipNewTab => 'Neuer Tab';
+
+  @override
+  String get tooltipCloseTab => 'Tab schließen';
+
+  @override
+  String get voiceTitle => 'Sprachnotiz';
+
+  @override
+  String get voiceSave => 'Sichern';
+
+  @override
+  String get voiceDiscard => 'Verwerfen';
+
+  @override
+  String get voiceLanguage => 'Sprache';
+
+  @override
+  String get voiceRecord => 'Aufnehmen';
+
+  @override
+  String get voiceStop => 'Stopp';
+
+  @override
+  String get voiceListening => 'Hört zu…';
+
+  @override
+  String get voiceHint =>
+      'Tippe auf das Mikrofon und sprich los. Vor dem Sichern kannst du den Text bearbeiten.';
+
+  @override
+  String get voicePermissionDenied =>
+      'Orgro braucht Zugriff auf Mikrofon und Spracherkennung. Du kannst ihn in der Einstellungen-App erlauben.';
+
+  @override
+  String get voiceOpenFile => 'Öffnen';
+
+  @override
+  String voiceSaved(String file) {
+    return 'In $file gesichert';
+  }
+
+  @override
+  String get finderModePapers => 'Paper';
+
+  @override
+  String get findPaperHint => 'Paper suchen…';
+
+  @override
+  String get findPaperOpenNote => 'Notiz öffnen';
+
+  @override
+  String get settingsSectionNotes => 'Notizen';
+
+  @override
+  String get settingsItemNotesFolder => 'Notizordner';
+
+  @override
+  String get settingsItemNotesFolderUnset =>
+      'Nicht gesetzt: der erste Ordner, auf den Orgro Zugriff hat';
+
+  @override
+  String get settingsItemNotesFolderClear => 'Entfernen';
+
+  @override
+  String get settingsItemBibliography => 'Literaturdatei';
+
+  @override
+  String get settingsItemBibliographyHelp =>
+      'Pfad der .bib-Datei innerhalb des Notizordners';
+
+  @override
+  String get settingsItemBibliographyReset => 'Standard';
+
+  @override
+  String findPaperLoadError(String error) {
+    return 'Literatur konnte nicht geladen werden ($error). Prüfe den Pfad unter Einstellungen → Notizen.';
+  }
+
+  @override
+  String get finderModeFiles => 'Dateien';
+
+  @override
+  String get findFileHint => 'Datei suchen…';
 }
